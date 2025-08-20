@@ -1,0 +1,5 @@
+python examples/generate_synthetic_tables.py --outdir examples/tables
+
+python Grotrian-JIP-NEW.py --file-level data/ModelAtomicIonLevel.dat --file-sublevel data/ModelAtomicIonLevelSublevel.dat --file-linefine data/ModelAtomicIonLineFine.dat --levs 1-25 --out figures/mgI_demo.png
+
+python Grotrian-JIP-NEW.py --file-level data/ModelAtomicIonLevel.dat --file-sublevel data/ModelAtomicIonLevelSublevel.dat --file-linefine data/ModelAtomicIonLineFine.dat --levs 1-25  --backend Qt5Agg --show
