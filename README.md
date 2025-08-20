@@ -119,14 +119,22 @@ main(args)
 ```
 
 
-## Notes and provenance
+## Notes and Provenance
 
-- The script targets Mg I and reproduces the layout and labeling style for Figure 4 in:
-Peralta, J. I., et al. 2023 — A&A 676, A18. (https://ui.adsabs.harvard.edu/#abs/2023A&A...676A..18P/abstract
-)
-- Tables may originate from NIST (https://www.nist.gov/data
-) or other sources.
-- The code is written to work for Mg I but can be adapted to other elements by changing --Z and --ion or by using appropriate tables.
+- **Primary Goal:** This script targets Mg I and reproduces the layout and labeling style for Figure 4 in the publication:
+  > Peralta, J. I., et al. 2023, A&A, 676, A18.  
+  > [Link to ADS](https://ui.adsabs.harvard.edu/abs/2023A%26A...676A..18P/abstract)
+
+- **Development History:** This repository contains a modernized and refactored version of the original script.
+    - The core logic was based on a 2016 script by the user "jaymz_ubuntu".
+    - It was adapted by me in 2021 for the analysis in the paper.
+    - In 2025, it was fully refactored into this more robust, shareable tool with the help of modern AI assistants (ChatGPT 5 and Gemini 2.5 Pro) to align with best practices in reproducible science.
+
+- **Data Sources:** The atomic data tables are expected to originate from sources like NIST ([National Institute of Standards and Technology](https://www.nist.gov/data)).
+
+- **Adaptability:** While the code is written to work for Mg I, it can be adapted to other elements by providing appropriate data tables and changing the `--Z` and `--ion` arguments.
+
+- **Feedback:** As this project is a continuous effort to build open and reproducible scientific software, feedback and suggestions for improvement are highly encouraged.
 
 
 ## License & citation
