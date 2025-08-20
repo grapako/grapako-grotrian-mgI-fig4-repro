@@ -1,12 +1,10 @@
 # src/grotrian_plotter/data_loader.py
 import pandas as pd
 import os
-import pyodbc, sqlalchemy
-
 
 def SQL_table(table, where='', columns='*', server='Local', database='AtmosphericModels4suoGPK'):
     ''' columns must be separated by commas as in a SQL query '''
-    
+    import pyodbc, sqlalchemy
     pyodbc.lowercase = False
     if server == 'Local':
         server = os.environ['COMPUTERNAME'] # Get your local server automatically
