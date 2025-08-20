@@ -1,8 +1,11 @@
-pycache/
-.py[cod]
-.so
-.env
+# Virtual Environment
 .venv/
-.venv/
-.env/
-*.egg-info/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Archivos generados
+# figures/*.png
+Runs.txt
