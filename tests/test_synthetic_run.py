@@ -11,7 +11,7 @@ def test_demo_run(tmp_path):
 
     outfig = tmp_path / "mg_demo.png"
     cmd2 = [
-        "python", "Grotrian-JIP-NEW.py",
+        "python", "src/cli.py",
         "--file-level", str(outdir / "ModelAtomicIonLevel.dat"),
         "--file-sublevel", str(outdir / "ModelAtomicIonLevelSublevel.dat"),
         "--file-linefine", str(outdir / "ModelAtomicIonLineFine.dat"),
