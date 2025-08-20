@@ -24,7 +24,7 @@ expected to contain at least the columns used by the script (see examples / gene
 ---
 
 ## What this repo contains
-- `src/Grotrian-JIP-NEW.py` — main script (CLI) that produces the diagram.
+- `src/cli.py` — main script (CLI) that produces the diagram.
 - `data/` — example small tables (just the Mg I specie) to test the script without the SQL DB.
   - `ModelAtomicIonLevel.dat`
   - `ModelAtomicIonLevelSublevel.dat`
@@ -49,7 +49,7 @@ pip install -r requirements.txt
 
 2. Run with the small demo tables included in this repo:
 ```bash
-python src/Grotrian-JIP-NEW.py \
+python src/cli.py \
   --file-level data/ModelAtomicIonLevel.dat \
   --file-sublevel data/ModelAtomicIonLevelSublevel.dat \
   --file-linefine data/ModelAtomicIonLineFine.dat \
@@ -61,7 +61,7 @@ python src/Grotrian-JIP-NEW.py \
 
 If you have the real SRPM SQL database available (and JIP helpers):
 ```bash
-python src/Grotrian-JIP-NEW.py --database AtomicModelsCCA --Z 12 --ion 0 --levs 1-25 --out figures/mgI_sql.png
+python src/cli.py --database AtomicModelsCCA --Z 12 --ion 0 --levs 1-25 --out figures/mgI_sql.png
 ```
 If both local files and DB are provided, local files take precedence.
 
@@ -103,7 +103,7 @@ The provided script and the demo tables generate a figure similar in layout to F
 
 - 1) ipython
 ```bash
-%run src/Grotrian-JIP-NEW.py --file-level data/ModelAtomicIonLevel.dat \
+%run src/cli.py --file-level data/ModelAtomicIonLevel.dat \
                              --file-sublevel data/ModelAtomicIonLevelSublevel.dat \
                              --file-linefine data/ModelAtomicIonLineFine.dat \
                              --levs 1-25 --out figures/mgI_demo.png
