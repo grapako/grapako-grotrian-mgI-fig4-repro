@@ -1,9 +1,17 @@
 # grotrian-mgI-fig4-repro
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/release/python-380/)
+
 Reproducible code to generate a Grotrian diagram for **Mg I** (Figure 4 from Peralta et al., 2023, A&A 676, A18). This repository contains a command-line script that builds the level diagram (Grotrian) from local table files or from an SQL database (SRPM).
 
 **Author:** Juan Ignacio Peralta (Juani) — Instituto de Astronomía y Física del Espacio (IAFE), UBA; CONICET (Argentina).  
 _Last updated: 2025-08-19_
+
+
+## Result
+![Diagrama de Grotrian para Mg I](figures/mgI_demo.png)
+
 
 **Important:** the three atomic tables used here (for Mg I) are:
 - `ModelAtomicIonLevel.dat`            — terms (levels / terms)
@@ -41,7 +49,7 @@ pip install -r requirements.txt
 
 2. Run with the small demo tables included in this repo:
 ```bash
-python Grotrian-JIP-NEW.py \
+python src/Grotrian-JIP-NEW.py \
   --file-level data/ModelAtomicIonLevel.dat \
   --file-sublevel data/ModelAtomicIonLevelSublevel.dat \
   --file-linefine data/ModelAtomicIonLineFine.dat \
@@ -53,7 +61,7 @@ python Grotrian-JIP-NEW.py \
 
 If you have the real SRPM SQL database available (and JIP helpers):
 ```bash
-python Grotrian-JIP-NEW.py --database AtomicModelsCCA --Z 12 --ion 0 --levs 1-25 --out figures/mgI_sql.png
+python src/Grotrian-JIP-NEW.py --database AtomicModelsCCA --Z 12 --ion 0 --levs 1-25 --out figures/mgI_sql.png
 ```
 If both local files and DB are provided, local files take precedence.
 
