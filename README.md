@@ -3,7 +3,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/release/python-380/)
 
-Reproducible code to generate a Grotrian diagram for **Mg I** (Figure 4 from Peralta et al., 2023, A&A 676, A18). This repository contains a command-line script that builds the level diagram (Grotrian) from local table files or from an SQL database (SRPM).
+Reproducible code to generate a Grotrian diagram for **Mg I** (Figure 4 from Peralta et al., 2023, A&A 676, A18). This repository contains a command-line script that builds the level diagram (Grotrian) from local table files or from an SQL database (SSRPM vode format).
 
 **Author:** Juan Ignacio Peralta (Juani) — Instituto de Astronomía y Física del Espacio (IAFE), UBA; CONICET (Argentina).  
 _Last updated: 2025-08-19_
@@ -43,11 +43,11 @@ expected to contain at least the columns used by the script (see examples / gene
 
 ```bash
 python -m venv .venv
-source .venv/bin/activate         # Windows: .venv\Scripts\activate
+source .venv/bin/activate Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-2. Run with the small demo tables included in this repo:
+2. Run with the tables included in this repo:
 ```bash
 python src/cli.py \
   --file-level data/ModelAtomicIonLevel.dat \
@@ -59,14 +59,14 @@ python src/cli.py \
 
 ## Quick start (SQL Database)
 
-If you have the real SRPM SQL database available (and JIP helpers):
+If you have the real SSRPM SQL database available:
 ```bash
 python src/cli.py --database AtomicModelsCCA --Z 12 --ion 0 --levs 1-25 --out figures/mgI_sql.png
 ```
 If both local files and DB are provided, local files take precedence.
 
 
-## Command-line options (summary)
+## Command-line options
 - --file-level PATH : local file for ModelAtomicIonLevel table (any name is fine).
 - --file-sublevel PATH : local file for ModelAtomicIonLevelSublevel.
 - --file-linefine PATH : local file for ModelAtomicIonLineFine.
